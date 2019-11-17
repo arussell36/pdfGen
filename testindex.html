@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" type="text/css" href="./style.css">
+      <title>${user}PDF</title>
+</head>
+<body style="background-color:${color}">
+    <section class="headContainer">
+        <div><img src="https://avatars2.githubusercontent.com/u/54922845?v=4" /></div>
+        <div>Username: ${user}</div>
+
+    </section>
+    <section class="bodyContainer">
+        <div>Name: ${name}</div>
+        <div>Biography: ${userBio}</div>
+        <div>Blog: ${blog}</div>
+        <div>Location: <a href="https://www.google.com/maps/place/${location}">${location}</a></div>
+        <div>GitHub Link: <a href="https://github.com/${user}">Profile Link</a></div>
+        <div>Public Repos: ${pubRepos}</div>
+        <div>Users Followed: ${following}</div>
+        <div>Stars: ${starCount}</div>
+    </section>
+</body>
+</html>

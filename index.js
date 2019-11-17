@@ -48,27 +48,32 @@ inquirer
 
 // --------BELOW IS HARDCODED HTML OUTPUT BASED ON THE ABOVE VARIBLES-------- //
       return HTMLOutput = `
-<!DOCTYPE html>
-<html lang="en">
-<head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>Document</title>
-</head>
-<body style="background-color:${color}">
-      <div>Username: ${user}</div>
-      <div>Name: ${name}</div>
-      <div><img src="${profileIMG}" /></div>
-      <div>Biography: ${userBio}</div>
-      <div>Blog: ${blog}</div>
-      <div>Location: <a href="https://www.google.com/maps/place/${location}">${location}</a></div>
-      <div>GitHub Link: <a href="https://github.com/${user}">Profile Link</a></div>
-      <div>Public Repos: ${pubRepos}</div>
-      <div>Users Followed: ${following}</div>
-      <div>Stars: ${starCount}</div>
-</body>
-</html>
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <link rel="stylesheet" type="text/css" href="./style.css">
+            <title>${user}PDF</title>
+      </head>
+      <body style="background-color:${color}">
+          <section class="headContainer">
+              <div><img src="https://avatars2.githubusercontent.com/u/54922845?v=4" /></div>
+              <div>Username: ${user}</div>
+          </section>
+          <section class="bodyContainer">
+          <div>Name: ${name}</div>
+              <div>Biography: ${userBio}</div>
+              <div>Blog: ${blog}</div>
+              <div>Location: <a href="https://www.google.com/maps/place/${location}">${location}</a></div>
+              <div>GitHub Link: <a href="https://github.com/${user}">Profile Link</a></div>
+              <div>Public Repos: ${pubRepos}</div>
+              <div>Users Followed: ${following}</div>
+              <div>Stars: ${starCount}</div>
+          </section>
+      </body>
+      </html>
 `;
     })
     .then(function(HTMLOutput) {
@@ -77,10 +82,9 @@ inquirer
         const html5ToPDF = new HTML5ToPDF({
           inputPath: path.join(__dirname, `./${username}.html`),
           outputPath: path.join(__dirname, `./${username}.pdf`),
-          // include: [
-          //   path.join(__dirname, "./template.css"),
-          //   // path.join(__dirname, `./${color}.css`)
-          // ],
+          include: [
+            path.join(__dirname, "./style.css"),
+          ],
           options: { printBackground: true }
         });
         await html5ToPDF.start();

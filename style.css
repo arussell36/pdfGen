@@ -1,0 +1,42 @@
+/* SEMI-ATOMIC CLASSES */
+
+.border {
+    border-style: solid;
+}
+
+
+
+/* FONTS */
+.franone {
+    font-family: 'Francois One', sans-serif;
+}
+
+.marker {
+    font-family: 'Permanent Marker', cursive;
+}
+
+.raleway {
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/* BACKGROUND */
+.bg1 {
+    background-color: #e3e3e3;
+}
+
+.bg2 {
+    background-color: white;
+}
+
+/* HEADER CLASSES */
+
+
+.headContainer {
+    display: flex;
+    padding: 5vw 15vw 0vw 15vw;
+}
+
+.bodyContainer {
+    padding: 5vw 15vw 0vw 15vw;
+}
