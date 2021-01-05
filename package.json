@@ -17,7 +17,7 @@
   "homepage": "https://github.com/arussell36/pdfGen#readme",
   "description": "",
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "fs": "0.0.1-security",
     "html5-to-pdf": "^3.2.0",
     "inquirer": "^7.0.0"
